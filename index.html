@@ -1,0 +1,75 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Paint  Z Web</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        
+        <script language="javascript" type="text/javascript" src="/js/vendor/prototype.js"></script>
+        <script language="javascript" type="text/javascript" src="/js/vendor/scriptaculous/scriptaculous.js"></script>
+        <script language="javascript" type="text/javascript" src="/js/vendor/scriptaculous/effect.js"></script>
+        
+        <!--My JavaScript Libs -->
+        <script language="javascript" type="text/javascript" src="/js/app/Shapes.js"></script>
+        <script language="javascript" type="text/javascript" src="/js/app/Drawing.js"></script>
+        <script language="javascript" type="text/javascript" src="/js/app/initialization.js"></script>
+        <script language="javascript" type="text/javascript" src="/js/app/Database.js"></script>
+        
+        <!--Color Picker JS files -->
+        <script type="text/javascript" src="/js/vendor/jscolor/jscolor.js"></script>
+        
+    </head>
+    <body>
+         <div id="title" >Paint Z Web</div>
+        <div id="content">
+           
+            <div id="toolbar">
+                <div class="toolbaritem"><button id="newBtn"><img alt="New" src="/images/newicon.png" /></button></div>
+                <div class="toolbaritem"><button id="saveBtn"><img alt="Save" src="/images/saveicon.png" /></button></div>
+                <div class="toolbaritem"><button id="openBtn"><img alt="Open" src="/images/openicon.png" /></button></div>
+                <div class="toolbaritem"><button id="downloadBtn"><img alt="Download" src="/images/downloadicon.png" /></button></div>
+                <div class="toolbaritem"><button id="undoBtn"><img alt="Undo" src="/images/undoicon.png" /></button></div>
+                <div class="toolbaritem"><button id="redoBtn"><img alt="Redo" src="/images/redoicon.png" /></button></div>
+                
+            </div>
+            <div id="maincontent">
+                <div id="leftsidebar" class="main">
+                    Choose Shape To Draw:
+                  <div class="sideitem"> <img class="toggle leftimgs" alt="Circle" src="/images/drawcircleicon.png" /></div>
+                    <div class="sideitem"><img class="toggle leftimgs" alt="Rectangle" src="/images/drawrectangleicon.png" /></div>
+                    <div class="sideitem"><img class="toggle leftimgs" alt="FillCircle" src="/images/fillcircleicon.png" /></div>
+                    <div class="sideitem"><img class="toggle leftimgs" alt="FillRectangle" src="/images/fillrectangleicon.png" /></div>
+                    <div class="sideitem"><img class="toggle leftimgs" alt="FreeHand" src="/images/freehandicon.png" /></div>
+                    <div class="sideitem"><img class="toggle leftimgs" alt="Erase" src="/images/erasericon.png" /></div>
+                    <div class="sideitem">
+                        <hr id="separator" >
+                    </div>
+                    <div class="sideitem">
+                        Choose Line Width:
+                        <div class="toggle  lefthr"><hr id="h1"/></div>
+                        <div class="toggle  lefthr"><hr id="h3"/></div>
+                        <div class="toggle  lefthr"><hr id="h5"/></div>
+                        <div class="toggle  lefthr"><hr id="h10"/></div>
+                    </div>
+                    <div class="sideitem">
+                        <hr id="separator" >
+                    </div>
+                    <div id="sideitem">
+                        Choose Color:
+                        <div style="width:70px;margin-left:auto;margin-right:auto;">
+                            <input id="color" style="width:70px;" value="000000">
+                        </div> 
+                    </div>
+                </div>
+                <div id="canvasdiv" class="main">
+                    <div id="msg"></div>
+                    <canvas id="canvas" width="829" height="785"/>
+                </div>
+                <div id="recentbar" class="main">
+                    <button id="recentBtn">Saved work</button>
+                    <div id="recentcontent"></div>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
