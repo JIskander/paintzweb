@@ -48,22 +48,38 @@ Event.observe(window,'load',function(e){
             //Toolbar events
             $('newBtn').observe('click',Paint.clearCanvas);
             $('saveBtn').observe('click',function(e){
-                            var name=prompt("Enter filename","Untitled");
-                            if(name)
+                            if(Utility.isfirefox14())
                             {
-                              Paint.saveCanvas(name)
-                              Paint.getRecent(10);
+                                 var name=prompt("Enter filename","Untitled");
+                                 if(name)
+                                 {
+                                    Paint.saveCanvas(name)
+                                    Paint.getRecent(10);
+                                  }
                             }
+                            else
+                                  alert('Feature not supported. Use Firefox 14+');
                             });
             $('openBtn').observe('click',function(e){
-                            var name=prompt("Enter filename","");
-                            if (name)
-                               Paint.openImage(name);
+                            if(Utility.isfirefox14())
+                            {
+                               var name=prompt("Enter filename","");
+                               if (name)
+                                  Paint.openImage(name);
+                            }
+                            else
+                                  alert('Feature not supported. Use Firefox 14+');
                             });
             $('downloadBtn').observe('click',Paint.downloadCanvas);
             $('undoBtn').observe('click',Paint.undo);
             $('redoBtn').observe('click',Paint.redo);
             $('recentBtn').observe('click',function(e){
-                            Paint.getRecent(10);
+                            if(Utility.isfirefox14())
+                            {
+                               Paint.getRecent(10);
+                            }
+                            else
+                                  alert('Feature not supported. Use Firefox 14+')
                             });
+            
 });

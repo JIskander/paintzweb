@@ -145,6 +145,9 @@ var Database=
     }
 }
 
-//Initialize and open Database
-Database.init();
-Database.open("myPaintDB");
+if(Utility.isfirefox14())
+{
+    //Initialize and open Database
+    Database.init();
+    Database.open("myPaintDB");
+}
