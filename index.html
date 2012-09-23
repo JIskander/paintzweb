@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Paintzweb : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Paintzweb</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/JIskander/paintzweb">View on GitHub</a>
+
+          <h1 id="project_title">Paintzweb</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/JIskander/paintzweb/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/JIskander/paintzweb/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>&lt;!Doctype html&gt;
+
+    </p>
+        Paint  Z Web<pre><code>    &lt;script language="javascript" type="text/javascript" src="/js/vendor/prototype.js"&gt;&lt;/script&gt;
+    &lt;script language="javascript" type="text/javascript" src="/js/vendor/scriptaculous/scriptaculous.js"&gt;&lt;/script&gt;
+    &lt;script language="javascript" type="text/javascript" src="/js/vendor/scriptaculous/effect.js"&gt;&lt;/script&gt;
+
+    &lt;!--My JavaScript Libs --&gt;
+    &lt;script language="javascript" type="text/javascript" src="/js/app/Shapes.js"&gt;&lt;/script&gt;
+    &lt;script language="javascript" type="text/javascript" src="/js/app/Drawing.js"&gt;&lt;/script&gt;
+    &lt;script language="javascript" type="text/javascript" src="/js/app/Utility.js"&gt;&lt;/script&gt;
+    &lt;script language="javascript" type="text/javascript" src="/js/app/Database.js"&gt;&lt;/script&gt;
+    &lt;script language="javascript" type="text/javascript" src="/js/app/initialization.js"&gt;&lt;/script&gt;
+
+    &lt;!--Color Picker JS files --&gt;
+    &lt;script type="text/javascript" src="/js/vendor/jscolor/jscolor.js"&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+     &lt;div id="title" &gt;Paint Z Web&lt;/div&gt;
+    &lt;div id="content"&gt;
+
+        &lt;div id="toolbar"&gt;
+            &lt;div class="toolbaritem"&gt;&lt;button id="newBtn"&gt;&lt;img alt="New" src="/images/newicon.png" /&gt;&lt;/button&gt;&lt;/div&gt;
+            &lt;div class="toolbaritem"&gt;&lt;button id="saveBtn"&gt;&lt;img alt="Save" src="/images/saveicon.png" /&gt;&lt;/button&gt;&lt;/div&gt;
+            &lt;div class="toolbaritem"&gt;&lt;button id="openBtn"&gt;&lt;img alt="Open" src="/images/openicon.png" /&gt;&lt;/button&gt;&lt;/div&gt;
+            &lt;div class="toolbaritem"&gt;&lt;button id="downloadBtn"&gt;&lt;img alt="Download" src="/images/downloadicon.png" /&gt;&lt;/button&gt;&lt;/div&gt;
+            &lt;div class="toolbaritem"&gt;&lt;button id="undoBtn"&gt;&lt;img alt="Undo" src="/images/undoicon.png" /&gt;&lt;/button&gt;&lt;/div&gt;
+            &lt;div class="toolbaritem"&gt;&lt;button id="redoBtn"&gt;&lt;img alt="Redo" src="/images/redoicon.png" /&gt;&lt;/button&gt;&lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div id="maincontent"&gt;
+            &lt;div id="leftsidebar" class="main"&gt;
+                Choose Shape To Draw:
+              &lt;div class="sideitem"&gt; &lt;img class="toggle leftimgs" alt="Circle" src="/images/drawcircleicon.png" /&gt;&lt;/div&gt;
+                &lt;div class="sideitem"&gt;&lt;img class="toggle leftimgs" alt="Rectangle" src="/images/drawrectangleicon.png" /&gt;&lt;/div&gt;
+                &lt;div class="sideitem"&gt;&lt;img class="toggle leftimgs" alt="FillCircle" src="/images/fillcircleicon.png" /&gt;&lt;/div&gt;
+                &lt;div class="sideitem"&gt;&lt;img class="toggle leftimgs" alt="FillRectangle" src="/images/fillrectangleicon.png" /&gt;&lt;/div&gt;
+                &lt;div class="sideitem"&gt;&lt;img class="toggle leftimgs" alt="FreeHand" src="/images/freehandicon.png" /&gt;&lt;/div&gt;
+                &lt;div class="sideitem"&gt;&lt;img class="toggle leftimgs" alt="Erase" src="/images/erasericon.png" /&gt;&lt;/div&gt;
+                &lt;div class="sideitem"&gt;
+                    &lt;hr id="separator" &gt;
+                &lt;/div&gt;
+                &lt;div class="sideitem"&gt;
+                    Choose Line Width:
+                    &lt;div class="toggle  lefthr"&gt;&lt;hr id="h1"/&gt;&lt;/div&gt;
+                    &lt;div class="toggle  lefthr"&gt;&lt;hr id="h3"/&gt;&lt;/div&gt;
+                    &lt;div class="toggle  lefthr"&gt;&lt;hr id="h5"/&gt;&lt;/div&gt;
+                    &lt;div class="toggle  lefthr"&gt;&lt;hr id="h10"/&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="sideitem"&gt;
+                    &lt;hr id="separator" &gt;
+                &lt;/div&gt;
+                &lt;div id="sideitem"&gt;
+                    Choose Color:
+                    &lt;div style="width:70px;margin-left:auto;margin-right:auto;"&gt;
+                        &lt;input id="color" style="width:70px;" value="000000"&gt;
+                    &lt;/div&gt; 
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id="canvasdiv" class="main"&gt;
+                &lt;div id="msg"&gt;&lt;/div&gt;
+                &lt;canvas id="canvas" width="829" height="785"/&gt;
+            &lt;/div&gt;
+            &lt;div id="recentbar" class="main"&gt;
+                &lt;button id="recentBtn"&gt;Saved work&lt;/button&gt;
+                &lt;div id="recentcontent"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+<p></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Paintzweb maintained by <a href="https://github.com/JIskander">JIskander</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
